@@ -25,6 +25,10 @@ function CheckDo()
 endfunction
 set list
 filetype plugin indent on
+autocmd filetype python set ts=8
+autocmd filetype python set sw=8
+autocmd filetype python set sts=8
+autocmd filetype python set noet
 set listchars=tab:\|\ ,
 set ls=2
 set grepprg=ack-grep\ -a
