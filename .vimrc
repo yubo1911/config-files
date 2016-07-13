@@ -1,3 +1,11 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Bundle 'Valloric/YouCompleteMe'
+call vundle#end()            " required
+filetype plugin indent on    " required
 execute pathogen#infect()
 autocmd BufNewFile *.py exec ":call SetTitle()"
 func SetTitle()
@@ -34,3 +42,10 @@ set ls=2
 set grepprg=ack-grep\ -a
 ca wq call CheckDo()
 ca w call CheckDo()
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+nnoremap gl :YcmCompleter GoToDeclaration<CR>
+nnoremap gf :YcmCompleter GoToDefinition<CR>
+nnoremap gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nmap <F4> :YcmDiags<CR>
