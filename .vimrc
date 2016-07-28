@@ -49,3 +49,5 @@ nnoremap gl :YcmCompleter GoToDeclaration<CR>
 nnoremap gf :YcmCompleter GoToDefinition<CR>
 nnoremap gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nmap <F4> :YcmDiags<CR>
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler_options = "-std=c++11 -stdlib=libc++"
